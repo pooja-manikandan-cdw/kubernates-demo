@@ -101,7 +101,7 @@ jobs:
 
       - name: Update image tag in deployement.yaml
         run: |
-          sed -i "s|\(image: .*/teach-simple-react:\).*|\1${{ steps.version.outputs.tag }}|" deploy-repo/deployement.yaml
+          sed -i "s|\(image: .*/teach-simple-react:\).*|\1${{ steps.version.outputs.tag }}|" kubernates-deployment/deployement.yaml
 
       - name: Raise PR to deploy repository
         env:
